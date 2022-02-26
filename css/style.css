@@ -1,0 +1,208 @@
+/* Box Model Hack */
+*,
+*::before,
+*::after {
+     box-sizing: border-box;
+     margin: 0;
+     padding: 0;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+nav > *,
+nav > section > *,
+ul > * {
+     float: left;
+}
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+header {
+     border-bottom: 1px solid #afafaf;
+     width: 100vw;
+}
+
+nav, main {
+     max-width: 900px;
+     margin: 0 auto;
+}
+
+ul {
+     list-style-type: none;
+     width: 100%;
+}
+
+nav > section {
+     width: 33.3333%;
+}
+
+nav li {
+     margin: 3% 4%;
+}
+
+.nav-center {
+     margin: 0 auto;
+}
+
+.nav-center a {
+     margin: 0 auto;
+}
+
+.nav-center img {
+     max-width: 150px;
+}
+
+input {
+     background: #d3e5ff;
+     color: blue;
+     border: none;
+     padding: 0.25rem;
+     border-radius: 2px;
+}
+
+main section {
+     width: 50%;
+     float: left;
+     line-height: 2rem;
+}
+
+main section + section {
+     padding-left: 2%;
+}
+
+section > img {
+     width: 100%;
+     margin: 10% 0;
+}
+
+section > h1 {
+     margin-top: 25%;
+     line-height: 3rem;
+     font-size: 2.5rem;
+     width: 75%;
+}
+
+.underlined {
+     background-image: url(../images/underline.png);
+     background-size: 13ch;
+     background-repeat: no-repeat;
+     background-position: 0 2rem;
+}
+
+
+
+.btn a {
+     text-decoration: none;
+     color: #fff;
+}
+
+.btn li {
+     background: rgb(0, 100, 250);
+     border-radius: 3.5px;
+     margin: 5% 2%;
+     padding: 0 0.5rem;
+}
+
+footer {
+     clear: both;
+     margin: 10% 0 2rem;
+}
+
+footer h2 {
+     text-align: center;
+}
+
+.nav-mobile-right {
+     display: none;
+}
+
+.mobile-only {
+     display: none;
+}
+
+.mobile-btn a{
+     display: none;
+}
+
+/* Tablet */
+@media screen and (max-width:818px) {
+     .nav-left {
+          display: none;
+     }
+
+     .nav-right {
+          display: none;
+     }
+
+     .nav-mobile-right {
+          display: block;
+          float: right;
+          color: blue;
+     }
+
+     .nav-mobile-right > * {
+          margin: 0.5rem;
+          text-align: right;
+          float: right;
+     }
+}
+
+/* Mobile */
+@media screen and (max-width:720px) {
+     .mobile-only {
+          display: block;
+
+     }
+
+     .mobile-only img {
+          width: 70%;
+     }
+
+     .left-img {
+          display: none;
+     }
+
+     .not-mobile a{
+          display: none;
+     }
+
+     .mobile-btn > a {
+          display: block;
+     }
+
+     section h1 {
+          font-size: 1.5rem;
+          line-height: 1.5rem;
+     }
+}
+
+/* Smallest Screens */
+@media screen and (max-width:450px) {
+     .mobile-only {
+          display: none;
+     }
+
+     .text {
+          text-align: center;
+          width: 100%;
+     }
+
+     .text h1 {
+          margin: 5% auto;
+     }
+}
